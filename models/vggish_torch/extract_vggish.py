@@ -47,9 +47,9 @@ class ExtractVGGish(torch.nn.Module):
         device = indices.device
 
         # Define the model in inference mode, load the model
-        print(os.path.join(plb.Path(__file__).parent, "checkpoints"))
+        # print(os.path.join(plb.Path(__file__).parent, "checkpoints"))
         model = VGGish(urls=model_urls, model_dir=os.path.join(plb.Path(__file__).parent, "checkpoints"),
-                       postprocess=False).to(device)
+                       postprocess=False, device=device).to(device)
         model.eval()
 
         # iterate over the list of videos
