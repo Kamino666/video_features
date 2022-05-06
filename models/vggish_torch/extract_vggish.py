@@ -62,7 +62,7 @@ class ExtractVGGish(torch.nn.Module):
             except KeyboardInterrupt:
                 raise KeyboardInterrupt
             except Exception as e:
-                traceback.print_exc()  # for the whole traceback
+                # traceback.print_exc()  # for the whole traceback
                 print(e)
                 print(f'Extraction failed at: {self.path_list[idx]}. Continuing extraction')
 
